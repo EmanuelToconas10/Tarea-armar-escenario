@@ -5,10 +5,13 @@ class Personaje {
   int velocidad = 5;
   
   Personaje() {
-    imagen = loadImage("personaje.png");
+    imagen = loadImage("personaje.jpg");
     x = width / 2;
     y = height - 100;
   }
+    public void dibujar(){
+    imageMode(CENTER);
+      }
   void mostrar() {
     image(imagen, x, y);
   }

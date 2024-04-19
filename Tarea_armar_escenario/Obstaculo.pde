@@ -14,7 +14,7 @@ class Obstaculo {
   void mostrar() {
     image(imagen, x, y);
   }
-  
+
   void actualizar() {
     // Mover de izquierda a derecha y viceversa
     if (moviendoDerecha) {

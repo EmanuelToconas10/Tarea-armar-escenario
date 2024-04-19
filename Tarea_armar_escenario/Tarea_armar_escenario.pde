@@ -5,26 +5,23 @@ class Juego {
   Obstaculo obstaculo;
   
   Juego() {
-    fondo = loadImage("fondo.jpg");
+    fondo = loadImage("fondo2.png");
     personaje = new Personaje();
     obstaculo = new Obstaculo();
   }
   
   void setup() {
     size(800, 600);
+  background(0);
+  personaje.mostrar();
+  obstaculo.mostrar();
   }
-  
+
   void draw() {
     // Dibujar fondo
     image(fondo, 0, 0, width, height);
     
-    // Actualizar y mostrar personaje
-    personaje.actualizar();
-    personaje.mostrar();
     
-    // Actualizar y mostrar obstaculo
-    obstaculo.actualizar();
-    obstaculo.mostrar();
   }
   
   void keyPressed() {
