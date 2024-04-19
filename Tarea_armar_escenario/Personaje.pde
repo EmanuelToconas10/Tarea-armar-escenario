@@ -6,7 +6,7 @@ class Personaje {
   Personaje() {
     imagen = loadImage("personaje.png");
   }
-  public Personaje(PVector posicion, PVector velocidad) {
+  public Personaje(PVector posicion) {
     this.posicion=posicion;
     this.imagen = loadImage("personaje.png");
   }

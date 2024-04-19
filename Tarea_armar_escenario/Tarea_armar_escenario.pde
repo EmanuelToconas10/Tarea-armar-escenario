@@ -7,7 +7,7 @@ public void setup() {
   size(1300, 940);
   fondo = loadImage("fondo.jpg");
   obstaculo = new Obstaculo(new PVector(1000,742), new PVector(5, 0));
-  personaje = new Personaje(new PVector(800, 800), new PVector(8, 0));
+  personaje = new Personaje(new PVector(800, 800));
 }
 
 void draw() {
