@@ -1,26 +1,22 @@
 // Clase para el personaje controlado por el usuario
 class Personaje {
-  PImage imagen;
-  int x, y;
-  int velocidad = 5;
-  
+  private PImage imagen;
+  private PVector posicion;
+
   Personaje() {
-    imagen = loadImage("personaje.jpg");
-    x = width / 2;
-    y = height - 100;
+    imagen = loadImage("personaje.png");
   }
-    public void dibujar(){
-    imageMode(CENTER);
-      }
-  void mostrar() {
-    image(imagen, x, y);
+  public Personaje(PVector posicion, PVector velocidad) {
+    this.posicion=posicion;
+    this.imagen = loadImage("personaje.png");
   }
-  
-  void mover(int direccion) {
-    if (direccion == LEFT) {
-      x -= velocidad;
-    } else if (direccion == RIGHT) {
-      x += velocidad;
-    }
+
+  public void mostrar() {
+    image(imagen, this.posicion.x, this.posicion.y);
+  }
+
+  public void mouseMoved() {
+    this.posicion.x = mouseX;
+    this.posicion.y = mouseY;
   }
 }
